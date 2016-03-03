@@ -1,3 +1,5 @@
-app.controller('mainController', ['$scope', function($scope){
-  $scope.foo = "bar"
+app.controller('mainController', ['$scope', '$auth', function($scope, $auth){
+  $scope.authenticate = function(provider) {
+   $auth.authenticate(provider);
+ };
 }]);
