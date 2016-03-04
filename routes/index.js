@@ -1,3 +1,4 @@
+require('dotenv').load()
 var express = require('express');
 var router = express.Router();
 var request = require('request')
@@ -15,7 +16,7 @@ router.post('/auth/facebook', function(req,res){
   var params = {
   code: req.body.code,
   client_id: req.body.clientId,
-  client_secret: ,
+  client_secret: process.env.FACEBOOK_CLIENT_SECRET,
   redirect_uri: req.body.redirectUri
  };
    request.get({ url: accessTokenUrl, qs: params, json: true }, function(err, response, accessToken) {
