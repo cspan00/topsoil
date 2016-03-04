@@ -15,7 +15,7 @@ router.post('/auth/facebook', function(req,res){
   var params = {
   code: req.body.code,
   client_id: req.body.clientId,
-  client_secret: 'c47116aac5f39b7999fc15447128718f',
+  client_secret: ,
   redirect_uri: req.body.redirectUri
  };
    request.get({ url: accessTokenUrl, qs: params, json: true }, function(err, response, accessToken) {
