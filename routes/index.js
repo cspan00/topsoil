@@ -2,11 +2,18 @@ require('dotenv').load()
 var express = require('express');
 var router = express.Router();
 var request = require('request')
-
+var knex = require('../db/knex')
 /* GET home page. */
+router.use(express.session({secret: '1234567890QWERTY'}));
+
+
 router.get('/', function(req, res, next) {
   res.json({ title: 'Express' })
 });
+
+function Users(){
+  return knex('users')
+}
 
 
 router.post('/auth/facebook', function(req,res){
@@ -26,7 +33,20 @@ router.post('/auth/facebook', function(req,res){
       request.get({ url: graphApiUrl, qs: accessToken, json: true }, function(err, response, profile) {
         if (response.statusCode !== 200) {
           return res.status(500).send({ message: profile.error.message });
-        } console.log(profile);
+        }
+          var user = {}
+          user.facebook_id = profile.id
+          user.image_url = 'https://graph.facebook.com/'+profile.id+'/picture?type=large'
+          user.email = profile.email
+          user.first_name = profile.first_name
+          user.last_name = profile.last_name
+          user.name = profile.name;
+          req.session.user = profile.id
+          Users().insert(user).then(function(result){
+            console.log('successful insert');
+
+          })
+
       })
     });
 
