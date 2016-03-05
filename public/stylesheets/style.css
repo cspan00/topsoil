@@ -2,11 +2,45 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
-}
-
 h1 {
   font-size: 100px;
-  color: #F5F5F5; 
+  color: #F5F5F5;
+}
+
+
+#splashBackground {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -1000;
+}
+#splashBackground img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  z-index: -1000;
+}
+.container{
+  height: 200vh;
+  margin: 0 auto;
+
+}
+
+
+
+.btn-facebook{
+  color: #46629E;
+  width: inherit;
+}
+
+.jumbotron{
+  background: transparent !important;
+  margin-left: 100px;
 }

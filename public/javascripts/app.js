@@ -17,4 +17,12 @@ app.config(function ($routeProvider, $authProvider) {
     templateUrl: 'views/splash.html',
     controller: 'mainController'
   })
+  .when('/profile',{
+    templateUrl: 'views/login.html',
+    controller: 'userController'
+  })
+  .when('/logout',{
+    templateUrl: 'views/splash.html',
+    controller: 'mainController'
+  })
 })
