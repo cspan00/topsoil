@@ -16,6 +16,10 @@ function Users(){
 function createToken(user){
   return jwt.sign(user, process.env.TOKEN_SECRET)
 }
+function verifyToken(user){
+  return jwt.verify(user, process.env.TOKEN_SECRET)
+}
+
 
 router.post('/auth/facebook', function(req,res){
   var fields = ['id', 'email', 'first_name', 'last_name', 'name'];
@@ -53,6 +57,12 @@ router.post('/auth/facebook', function(req,res){
 
       })
     });
+
+router.post('/user', function(req, res){
+  var token = req.body.token
+  var user = verifyToken(token)
+  res.send(user)
+})
 
 
 
