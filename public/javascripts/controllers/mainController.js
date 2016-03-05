@@ -14,8 +14,8 @@
       $auth.authenticate(provider)
         .then(function(response) {
           console.log('You have successfully signed in with ' + provider + '!');
-          console.log(response);
-          $location.path('/');
+          console.log(response.data.token);
+          $location.path('/profile');
         })
         .catch(function(error) {
           if (error.error) {
@@ -23,15 +23,13 @@
             console.log(error.error);
           } else if (error.data) {
             // HTTP response error from server
-            console.log(error.data.message, error.status);
+          console.log(error.data.message, error.status);
           } else {
             console.log(error);
           }
         });
     };
   });
-
-
 
 
 

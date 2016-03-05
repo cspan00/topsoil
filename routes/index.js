@@ -3,6 +3,7 @@ var express = require('express');
 var router = express.Router();
 var request = require('request')
 var knex = require('../db/knex')
+var jwt = require('jsonwebtoken')
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.json({ title: 'Express' })
@@ -12,6 +13,9 @@ function Users(){
   return knex('users')
 }
 
+function createToken(user){
+  return jwt.sign(user, process.env.TOKEN_SECRET)
+}
 
 router.post('/auth/facebook', function(req,res){
   var fields = ['id', 'email', 'first_name', 'last_name', 'name'];
@@ -38,10 +42,14 @@ router.post('/auth/facebook', function(req,res){
           user.first_name = profile.first_name
           user.last_name = profile.last_name
           user.name = profile.name;
-          Users().insert(user).then(function(result){
-            console.log('successful insert');
-
-          })
+          var token = createToken(user)
+          Users().insert(user)
+            .catch(function(error){
+              console.log(error);
+            }).then(function(){
+              res.send({token: token})
+              // console.log("Successfull insert. Token is: "+token);
+            })
 
       })
     });
