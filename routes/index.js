@@ -4,9 +4,6 @@ var router = express.Router();
 var request = require('request')
 var knex = require('../db/knex')
 /* GET home page. */
-router.use(express.session({secret: '1234567890QWERTY'}));
-
-
 router.get('/', function(req, res, next) {
   res.json({ title: 'Express' })
 });
@@ -41,7 +38,6 @@ router.post('/auth/facebook', function(req,res){
           user.first_name = profile.first_name
           user.last_name = profile.last_name
           user.name = profile.name;
-          req.session.user = profile.id
           Users().insert(user).then(function(result){
             console.log('successful insert');
 
