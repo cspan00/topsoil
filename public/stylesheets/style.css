@@ -36,23 +36,17 @@ body {
   margin-left: 100px;
   text-align: center;
 }
-.pageTitle{
-  color: #f6fcf2;
-  /*text-align: center;*/
-}
 
+/*----------------user profile page-----------------*/
 .navigation {
   background-color: #61B329;
   height: 15vh;
   line-height: 15vh;
+  white-space: nowrap;
 }
 .headerTitle {
   color: #f6fcf2;
-  font-size: 50px;
-}
-.navbar{
-  white-space: nowrap;
-  /*text-align: center;*/
+  font-size: 30px;
 }
 .dropdown {
   color: #f6fcf2;
@@ -60,4 +54,8 @@ body {
 }
 .expandArrow {
   color: #f6fcf2;
+}
+.profilePicture {
+  border-radius: 30px;
+  padding-left: 10px;
 }

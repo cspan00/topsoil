@@ -7,32 +7,27 @@
 
     <div>
       <p class="dropdown pull-right" ng-click="showDropDown()">Connect
-        <img src="https://maxcdn.icons8.com/Android_L/PNG/24/Arrows/expand_arrow-24.png" ng-click="$mdOpenMenu($event)" class="expandArrow" title="Expand Arrow" width="27">
+        <img src="https://maxcdn.icons8.com/Android_L/PNG/24/Arrows/expand_arrow-24.png" class="expandArrow" title="Expand Arrow" width="27">
       </p>
     </div>
   </div>
+</nav>
 
-shit
-  <div ng-repeat="user in users">
-    <div class="row-fluid">
-      <div class="media">
-      </div>
+<div>
+  <div class="row-fluid">
+    <div class="media">
+    </div>
+    <div class="media-left">
+      <img class="profilePicture" src="{{user.image_url}}">
+    </div>
 
-
-
-      <div class="media-left">
-        <img class="profilePicture" src="">
-      </div>
-
-      <div class="media-body">
-        <p class="userName"></p>
-      </div>
-
-      </div>
+    <div class="media-body">
+      <p class="userName">{{user.first_name}}</p>
+    </div>
 
   </div>
 
-</nav>
+</div>
 
 
 
@@ -43,7 +38,5 @@ shit
 
 
 
-
-<h1> successfully logged in</h1>
 <p><a ng-click="logout()" href = "/#/" class="btn btn-primary btn-facebook"><i class="fa fa-facebook-official"></i> Logout</a></p>
-<p><a ng-click="test()"class="btn btn-primary btn-facebook"><i class="fa fa-facebook-official"></i> Test Me</a></p>
+<!-- <p><a ng-click="test()"class="btn btn-primary btn-facebook"><i class="fa fa-facebook-official"></i> Test Me</a></p> -->
