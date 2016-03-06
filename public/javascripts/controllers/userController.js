@@ -7,6 +7,7 @@ app.controller('userController', function($scope, $location, $auth, users){
   users.getUserData().then(function(result){
     $scope.user = result;
   })
+  
   users.getPosts().then(function(result){
     $scope.posts = result;
   })

@@ -7,7 +7,13 @@
          url('FFF_Tusj-webfont.svg#fff_tusjbold') format('svg');
     font-weight: normal;
     font-style: normal;
+}
 
+@font-face {
+    font-family: 'JennaSue';
+    src: url('fonts/JennaSue.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -44,11 +50,9 @@ body {
 }
 .btn-facebook{
   margin: 30px;
-  width: inherit;
-}
-.btn-facebook:hover{
-  /*color: silver;*/
-  width: inherit;
+  width: 230px;
+  font-size: 30px;
+  color: #FEFBF7;
 }
 .jumbotron{
   background: transparent !important;
@@ -58,10 +62,27 @@ body {
 h1.pageTitle {
   color: #faebd7;
   font-size: 100px;
-  /*font-family: "lobster";*/
   font-family: 'fff_tusjbold';
 }
-
+h2.learnMore {
+  font-family: 'JennaSue';
+  font-weight: 700;
+  font-size: 60px;
+  color: #faebd7;
+}
+h1.splashPageAboutTitle {
+  font-family: 'JennaSue';
+  font-weight: 700;
+  background: rgba(254, 251, 247, .8);
+  padding: 10px;
+  border-radius: 20px;
+}
+.splashPageSummary {
+  font-family: 'JennaSue';
+  background: rgba(254, 251, 247, .8);
+  padding: 10px;
+  border-radius: 20px;
+}
 /*----------------user profile page-----------------*/
 
 .navigation {
@@ -71,9 +92,7 @@ h1.pageTitle {
   white-space: nowrap;
 }
 .headerTitle {
-  /*color: #faebd7;*/
   font-size: 30px;
-  /*font-family: "lobster";*/
   font-family: 'fff_tusjbold';
 }
 /*.dropdown {
@@ -112,5 +131,4 @@ h1.pageTitle {
 .pageInfo{
   position: absolute;
   top: 1000px;
-
 }
