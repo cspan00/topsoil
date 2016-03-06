@@ -25,4 +25,8 @@ app.config(function ($routeProvider, $authProvider) {
     templateUrl: 'views/splash.html',
     controller: 'mainController'
   })
+  .when('/new',{
+    templateUrl: 'views/new.html',
+    controller: 'userController'
+  })
 })
