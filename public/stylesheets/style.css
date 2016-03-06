@@ -113,7 +113,7 @@ h1.splashPageAboutTitle {
 }
 .facebookButton:hover, .createListingButton:hover {
   color: #61B329;
-  background-color: black; 
+  background-color: black;
 }
 .backgroundColor {
   background: #FEFBF7;
@@ -144,4 +144,35 @@ h1.splashPageAboutTitle {
 }
 .homeIconLink:hover {
   color: black;
+}
+
+
+/*------------newForm----------------*/
+form {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 30px;
+  font-weight: 700;
+}
+label, .styled-select {
+  padding-top: 20px;
+}
+.styled-select select {
+	font-size: 30px;
+	width: 380px;
+	height: 40px;
+	text-indent: 10px;
+	-webkit-appearance: none;
+  background: white;
+}
+.newFormSubmitButton {
+  font-size: 30px;
+  margin-top: 20px;
+  width: 100px;
+  background-color: black;
+}
+.newFormSubmitButton:hover {
+  color: #fefbf7;
+  background-color: #61b329;
+  border: none;
 }
