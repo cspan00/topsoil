@@ -1,6 +1,21 @@
+@font-face {
+    font-family: 'fff_tusjbold';
+    src: url('FFF_Tusj-webfont.eot');
+    src: url('FFF_Tusj-webfont.eot?#iefix') format('embedded-opentype'),
+         url('FFF_Tusj-webfont.woff') format('woff'),
+         url('FFF_Tusj-webfont.ttf') format('truetype'),
+         url('FFF_Tusj-webfont.svg#fff_tusjbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-family: "Raleway";
+  /*font-family: "Raleway";*/
+  font-family: 'JennaSue'; 
   font-weight: 700;
   font-style: italic;
 }
@@ -43,7 +58,8 @@ body {
 h1.pageTitle {
   color: #faebd7;
   font-size: 100px;
-  font-family: "lobster";
+  /*font-family: "lobster";*/
+  font-family: 'fff_tusjbold';
 }
 
 /*----------------user profile page-----------------*/
@@ -55,9 +71,10 @@ h1.pageTitle {
   white-space: nowrap;
 }
 .headerTitle {
-  color: #faebd7;
+  /*color: #faebd7;*/
   font-size: 30px;
-  font-family: "lobster";
+  /*font-family: "lobster";*/
+  font-family: 'fff_tusjbold';
 }
 /*.dropdown {
   color: #f6fcf2;
