@@ -1,13 +1,6 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
-h1 {
-  font-size: 100px;
-  color: #F5F5F5;
-}
-
-
 #splashBackground {
   position: fixed;
   top: -50%;
@@ -30,17 +23,41 @@ h1 {
 .container{
   height: 200vh;
   margin: 0 auto;
-
 }
-
-
-
 .btn-facebook{
-  color: #46629E;
   width: inherit;
 }
-
+.btn-facebook:hover{
+  color: silver;
+  width: inherit;
+}
 .jumbotron{
   background: transparent !important;
   margin-left: 100px;
+  text-align: center;
+}
+.pageTitle{
+  color: #f6fcf2;
+  /*text-align: center;*/
+}
+
+.navigation {
+  background-color: #61B329;
+  height: 15vh;
+  line-height: 15vh;
+}
+.headerTitle {
+  color: #f6fcf2;
+  font-size: 50px;
+}
+.navbar{
+  white-space: nowrap;
+  /*text-align: center;*/
+}
+.dropdown {
+  color: #f6fcf2;
+  font-size: 20px;
+}
+.expandArrow {
+  color: #f6fcf2;
 }

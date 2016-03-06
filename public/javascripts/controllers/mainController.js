@@ -1,5 +1,5 @@
-
   app.controller('mainController', function($scope, $location, $auth) {
+
     $scope.login = function() {
       $auth.login($scope.user)
         .then(function() {
