@@ -39,7 +39,7 @@ body {
   z-index: -1000;
 }
 .splashContainer{
-  height: 200vh;
+  height: 170vh;
   margin: 0 auto;
 }
 .btn-facebook{
@@ -104,4 +104,13 @@ h1.pageTitle {
 .postThumbnail{
   width: 100px;
   height: 100px;
+}
+.learnMore{
+  margin-top: 60px;
+  font-family: lobster;
+}
+.pageInfo{
+  position: absolute;
+  top: 1000px;
+
 }
