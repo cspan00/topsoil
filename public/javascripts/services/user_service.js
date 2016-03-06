@@ -7,7 +7,7 @@ this.getUserData = function(){
     return $http.post('user', data).then(function(response){
     return response.data
   })
-}
+};
 
 
 
