@@ -12,6 +12,9 @@ router.get('/', function(req, res, next) {
 function Users(){
   return knex('users')
 }
+function Posts(){
+  return knex('posts')
+}
 
 function createToken(user){
   return jwt.sign(user, process.env.TOKEN_SECRET)
@@ -64,6 +67,11 @@ router.post('/user', function(req, res){
   res.send(user)
 })
 
+router.get('/posts', function(req, res, next){
+  Posts().select().then(function(response){
+    res.send(response)
+  })
+})
 
 
 
