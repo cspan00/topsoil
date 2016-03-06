@@ -63,7 +63,9 @@ h1.pageTitle {
 }
 
 /*----------------user profile page-----------------*/
-
+.nav {
+  margin-bottom: 0
+}
 .navigation {
   background-color: #61B329;
   height: 15vh;
@@ -85,7 +87,11 @@ h1.pageTitle {
 }
 .profilePicture {
   border-radius: 30px;
-  padding-left: 10px;
+  /*padding-left: 10px;*/
+}
+.media-left {
+  text-align: center;
+  padding-left: 10px; 
 }
 .facebookButton {
   background-color: #FEFBF7;
@@ -98,5 +104,6 @@ h1.pageTitle {
 }
 .welcomeUser {
   font-size: 20px;
-  padding-left: 10px;
+  /*padding-left: 10px;*/
+
 }
