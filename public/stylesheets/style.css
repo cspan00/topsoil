@@ -1,5 +1,8 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: "Raleway";
+  font-weight: 700;
+  font-style: italic;
 }
 #splashBackground {
   position: fixed;
@@ -20,15 +23,16 @@ body {
   min-height: 50%;
   z-index: -1000;
 }
-.container{
+.splashContainer{
   height: 200vh;
   margin: 0 auto;
 }
 .btn-facebook{
+  margin: 30px;
   width: inherit;
 }
 .btn-facebook:hover{
-  color: silver;
+  /*color: silver;*/
   width: inherit;
 }
 .jumbotron{
@@ -36,8 +40,14 @@ body {
   margin-left: 100px;
   text-align: center;
 }
+h1.pageTitle {
+  color: #faebd7;
+  font-size: 100px;
+  font-family: "lobster";
+}
 
 /*----------------user profile page-----------------*/
+
 .navigation {
   background-color: #61B329;
   height: 15vh;
@@ -45,17 +55,31 @@ body {
   white-space: nowrap;
 }
 .headerTitle {
-  color: #f6fcf2;
+  color: #faebd7;
   font-size: 30px;
+  font-family: "lobster";
 }
-.dropdown {
+/*.dropdown {
   color: #f6fcf2;
   font-size: 20px;
-}
+}*/
 .expandArrow {
   color: #f6fcf2;
 }
 .profilePicture {
   border-radius: 30px;
+  padding-left: 10px;
+}
+.facebookButton {
+  background-color: #FEFBF7;
+  color: black;
+  border: none;
+}
+.backgroundColor {
+  background: #FEFBF7;
+  height: 100vh;
+}
+.welcomeUser {
+  font-size: 20px;
   padding-left: 10px;
 }
