@@ -3,5 +3,7 @@ app.controller('userController', function($scope, $location, $auth, users){
     $auth.logout()
     console.log("successfully logged out!");
   }
-  $scope.test = users.getUserData
+  users.getUserData().then(function(result){
+    $scope.user = result;
+  })
 });
