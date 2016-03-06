@@ -10,6 +10,11 @@
 }
 
 @font-face {
+    font-family: 'Quicksand';
+    src: url('fonts/Quicksand-Light.otf') format('truetype');
+}
+
+@font-face {
     font-family: 'JennaSue';
     src: url('fonts/JennaSue.ttf') format('truetype');
     font-weight: normal;
@@ -18,7 +23,7 @@
 
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-family: 'JennaSue';
+  font-family: 'Quicksand';
   font-weight: 700;
   font-style: italic;
   background: rgb(254, 251, 247);
@@ -51,6 +56,7 @@ body {
   width: 230px;
   font-size: 30px;
   color: #FEFBF7;
+  font-family: 'JennaSue';
 }
 .jumbotron{
   background: transparent !important;
@@ -78,7 +84,7 @@ h1.splashPageAboutTitle {
 .splashPageSummary {
   font-family: 'JennaSue';
   font-weight: bold;
-  font-size: 50px;
+  font-size: 40px;
   background: rgba(254, 251, 247, .2);
   padding: 10px;
   border-radius: 20px;
@@ -94,10 +100,6 @@ h1.splashPageAboutTitle {
   font-size: 30px;
   font-family: 'fff_tusjbold';
 }
-/*.dropdown {
-  color: #f6fcf2;
-  font-size: 20px;
-}*/
 .expandArrow {
   color: #f6fcf2;
 }
@@ -112,19 +114,22 @@ h1.splashPageAboutTitle {
   font-size: 25px;
   margin: 10px;
   font-weight: 500;
+  font-family: 'JennaSue';
 }
 .facebookButton:hover, .createListingButton:hover {
   color: #61B329;
   background-color: black;
+  font-family: 'JennaSue'
 }
 .backgroundColor {
   background: #FEFBF7;
   height: 100vh;
 }
 .welcomeUser {
-  font-family: lobster;
+  font-family: 'JennaSue';
   font-size: 25px;
   padding-left: 10px;
+
 }
 .postThumbnail{
   width: 100px;
@@ -148,4 +153,41 @@ h1.splashPageAboutTitle {
 }
 .homeIconLink:hover {
   color: black;
+}
+.postBodyFont {
+  font-family: 'Quicksand';
+}
+
+/*------------newForm----------------*/
+form {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 30px;
+  font-weight: 700;
+}
+label {
+  font-family: 'JennaSue';
+}
+label, .styled-select {
+  padding-top: 20px;
+}
+.styled-select select {
+	font-size: 30px;
+	height: 40px;
+	text-indent: 10px;
+  font-family: 'JennaSue';
+  background: white;
+}
+.newFormSubmitButton {
+  font-size: 30px;
+  margin-top: 20px;
+  width: 100px;
+  background-color: black;
+  font-family: 'JennaSue';
+  padding: 0 10px;
+}
+.newFormSubmitButton:hover {
+  color: #fefbf7;
+  background-color: #61b329;
+  border: none;
 }
