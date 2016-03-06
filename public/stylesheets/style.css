@@ -16,14 +16,12 @@
     font-style: normal;
 }
 
-
-
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  /*font-family: "Raleway";*/
   font-family: 'JennaSue';
   font-weight: 700;
   font-style: italic;
+  background: rgb(254, 251, 247);
 }
 #splashBackground {
   position: fixed;
@@ -84,7 +82,6 @@ h1.splashPageAboutTitle {
   border-radius: 20px;
 }
 /*----------------user profile page-----------------*/
-
 .navigation {
   background-color: #61B329;
   height: 15vh;
@@ -106,10 +103,17 @@ h1.splashPageAboutTitle {
   border-radius: 30px;
   padding-left: 10px;
 }
-.facebookButton {
+.facebookButton, .createListingButton {
   background-color: #FEFBF7;
   color: black;
   border: none;
+  font-size: 25px;
+  margin: 10px;
+  font-weight: 500;
+}
+.facebookButton:hover, .createListingButton:hover {
+  color: #61B329;
+  background-color: black; 
 }
 .backgroundColor {
   background: #FEFBF7;
@@ -131,4 +135,13 @@ h1.splashPageAboutTitle {
 .pageInfo{
   position: absolute;
   top: 1000px;
+}
+.homeIcon {
+  padding-right: 50px;
+}
+.homeIconLink {
+  color: #fefbf7;
+}
+.homeIconLink:hover {
+  color: black;
 }
