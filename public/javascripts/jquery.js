@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+  $(this).scrollTop(0);
 
   $(document).on('click', '.learnMore', function() {
     var vheight = $(window).height();
