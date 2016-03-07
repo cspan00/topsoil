@@ -185,11 +185,7 @@ h1.splashPageAboutTitle {
 .postBodyFont {
   font-family: 'Quicksand';
 }
-/*.checkboxLabelText {
-  font-size: 25px;
-  margin: 0 10px;
-  font-family: 'JennaSue';
-}*/
+
 /*------------newForm----------------*/
 form {
   width: 80%;
@@ -200,12 +196,10 @@ form {
 label {
   font-family: 'JennaSue';
 }
-label, .styled-select {
+.styled-select {
   padding-top: 20px;
 }
 .styled-select select {
-	font-size: 30px;
-	height: 40px;
 	text-indent: 10px;
   font-family: 'JennaSue';
   background: white;
