@@ -231,3 +231,19 @@ label {
   margin: 0 auto;
   padding: 20px;
 }
+/*-------------------------profile of user page -------------------*/
+.profilePagePicture {
+  border-radius: 30px;
+  padding-left: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.profilePageUserName {
+  font-size: 50px;
+  font-family: 'JennaSue';
+}
+.profilePoints {
+  font-family: 'fff_tusjbold';
+  font-size: 30px;
+  margin-top: 30px; 
+}

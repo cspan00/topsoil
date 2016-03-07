@@ -21,6 +21,12 @@ this.getShowPost = function(id){
   })
 }
 
+this.getUserById = function(id){
+  return $http.get('profile/'+id).then(function(response){
+    return response.data
+  })
+}
+
 
 
 

@@ -33,4 +33,8 @@ app.config(function ($routeProvider, $authProvider) {
     templateUrl: 'views/show.html',
     controller: 'showController'
   })
+  .when('/profile/:id',{
+    templateUrl: 'views/profile.html',
+    controller: 'profileController'
+  })
 })

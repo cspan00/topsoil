@@ -81,9 +81,17 @@ router.post('/post', function(req, res, next){
 
 router.get('/post/:id', function(req, res, next){
   Posts().where('id', req.params.id).first().then(function(response){
-    res.send(response)
+    res.send(response);
   })
 })
+
+router.get('/profile/:id', function(req,res, next){
+  Users().where('facebook_id', req.params.id).first().then(function(response){
+    res.send(response);
+  })
+})
+
+
 
 
 
