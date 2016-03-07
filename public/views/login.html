@@ -1,17 +1,16 @@
 <nav class="navbar navbar-default navigation">
-  <div class="container navbarContainer">
+  <div class="container-fluid">
     <div class="navbar-header headerTitle">
-      <a href="/#/" class="homeIconLink"><i class="fa fa-2x fa-home homeIcon"></i></a> Connect Share Grow
+        <a href="/#/" class="homeIconLink"><i class="fa fa-2x fa-home homeIcon"></i></a> Connect Share Grow
     </div>
-      <a ng-click="logout()" href = "/#/" class="btn btn-primary btn-facebook facebookButton pull-right"><i class="fa fa-facebook-official"></i>Logout</a>
-      <a class="createListingButton btn btn-primary pull-right" href="/#/new"><span><img src="../images/american-mountain-ash.png" class="three-twigs" width="30px"></span>Create a Listing</a>
+    <a class="createListingButton btn btn-primary pull-right" href="/#/profile">Listings Page</a>
+    <a ng-click="logout()" href = "/#/" class="btn btn-primary btn-facebook facebookButton pull-right"><i class="fa fa-facebook-official"></i>Logout</a>
+    <span class="pull-right checkboxLabelText btn btn-primary"><input type="checkbox" ng-model="search.want" ng-true-value='true' data-ng-false-value=''>Needs Land</span>
 
-      <span class="pull-right checkboxLabelText btn btn-primary"><input type="checkbox" ng-model="search.want" ng-true-value='true' data-ng-false-value=''>Needs Land</span>
-
-      <span class="pull-right checkboxLabelText btn btn-primary"><input type="checkbox" ng-model="search.want" ng-true-value='false' data-ng-false-value=''>Has Land</span>
-
+    <span class="pull-right checkboxLabelText btn btn-primary"><input type="checkbox" ng-model="search.want" ng-true-value='false' data-ng-false-value=''>Has Land</span>
   </div>
 </nav>
+
 
 <div class="backgroundColor">
   <div class="row-fluid postBodyFont">

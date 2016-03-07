@@ -1,14 +1,13 @@
 <nav class="navbar navbar-default navigation">
-  <div class="container navbarContainer">
+  <div class="container-fluid">
     <div class="navbar-header headerTitle">
-      <a href="/#/" class="homeIconLink"><i class="fa fa-2x fa-home homeIcon"></i></a> Connect
-      <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Food/carrot-25.png" title="Carrot" width="27"> Share
-      <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Food/carrot-25.png" title="Carrot" width="27"> Grow
+        <a href="/#/" class="homeIconLink"><i class="fa fa-2x fa-home homeIcon"></i></a> Connect Share Grow
     </div>
-      <a ng-click="logout()" href = "/#/" class="btn btn-primary btn-facebook facebookButton pull-right"><i class="fa fa-facebook-official"></i>Logout</a>
-      <a class="createListingButton btn btn-primary pull-right" href="/#/profile">Listings Page</a>
+    <a class="createListingButton btn btn-primary pull-right" href="/#/profile">Listings Page</a>
+    <a ng-click="logout()" href = "/#/" class="btn btn-primary btn-facebook facebookButton pull-right"><i class="fa fa-facebook-official"></i>Logout</a>
   </div>
 </nav>
+
 
   <div class="form">
     <form ng-submit = "submitPost()">

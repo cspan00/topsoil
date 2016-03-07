@@ -103,7 +103,8 @@ h1.splashPageAboutTitle {
 /*----------------user profile page-----------------*/
 .navigation {
   background-color: #61B329;
-  height: 15vh;
+  /*height: 15vh;*/
+  min-height: 15vh;
   line-height: 15vh;
   white-space: nowrap;
 }
@@ -171,7 +172,7 @@ h1.splashPageAboutTitle {
   border-radius: 20px;
 }
 .eachPost:last-child{
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
 }
 .learnMore{
   margin-top: 60px;
