@@ -131,6 +131,12 @@ h1.splashPageAboutTitle {
   padding-left: 10px;
   text-align: center;
 }
+.booleanValue {
+  display: block;
+  font-family: 'JennaSue';
+  font-size: 25px;
+  font-weight: 700; 
+}
 .postThumbnail{
   width: 100px;
   height: 100px;

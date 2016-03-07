@@ -4,6 +4,8 @@ app.controller('userController', function($scope, $location, $auth, $http, users
     $auth.logout()
     console.log("successfully logged out!");
   }
+
+
   users.getUserData().then(function(result){
     $scope.user = result;
   })
@@ -30,7 +32,5 @@ app.controller('userController', function($scope, $location, $auth, $http, users
     })
 
   }
-
-
 
 });
