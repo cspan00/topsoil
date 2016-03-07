@@ -8,24 +8,20 @@
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'Quicksand';
     src: url('fonts/Quicksand-Light.otf') format('truetype');
 }
-
 @font-face {
     font-family: 'Raleway-Light';
     src: url('fonts/Raleway-Light.otf') format('truetype');
 }
-
 @font-face {
     font-family: 'JennaSue';
     src: url('fonts/JennaSue.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   font-family: 'Quicksand';
@@ -194,7 +190,6 @@ h1.splashPageAboutTitle {
 .postBodyFont {
   font-family: 'Quicksand';
 }
-
 /*------------newForm----------------*/
 form {
   width: 80%;
@@ -212,7 +207,7 @@ label {
   padding-top: 20px;
 }
 .styled-select select {
-	text-indent: 10px;
+    text-indent: 10px;
   font-family: 'JennaSue';
   background: white;
 }
