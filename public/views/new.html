@@ -11,27 +11,27 @@
 </nav>
 
   <div class="form">
-    <form action="#" method="post">
+    <form ng-submit = "submitPost()">
       <div class="errors">
         <p class="errorMessage"></p>
       </div>
       <div class="form-group">
         <div>
           <label for="title">Title</label>
-          <input class="form-control" type="text" id="title" placeholder="Post Title" name="title">
+          <input class="form-control" type="text" id="title" placeholder="Post Title" ng-model="title">
         </div>
         <div>
           <label for="address">Address</label>
-          <input class="form-control" type="text" id="address" placeholder="Street, City, State, Zip" name="address">
+          <input class="form-control" type="text" id="address" placeholder="Street, City, State, Zip" ng-model="address">
         </div>
         <div>
           <label for="description">Description</label>
-          <textarea rows="5" class="form-control" type="text" id="description" placeholder="briefly describe what you are looking for and or offering" name="description"></textarea>
+          <textarea rows="5" class="form-control" type="text" id="description" placeholder="briefly describe what you are looking for and or offering" ng-model="description"></textarea>
         </div>
         <div class="styled-select">
-          <select class="service-area" name="service-area"><optgroup>
-            <option value="wantLand" class="service-small" selected="selected">Want Land</option>
-            <option value="gotLand" class="service-small">Got Land</option>
+          <select class="service-area" name="service-area" ng-model="want"><optgroup>
+            <option value="true" class="service-small" selected="selected">Want Land</option>
+            <option value="false" class="service-small">Got Land</option>
           </optgroup></select>
         </div>
         <button class="btn btn-primary newFormSubmitButton" type="submit">Submit</button>
