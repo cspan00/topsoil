@@ -224,3 +224,10 @@ label {
   background-color: #61b329;
   border: none;
 }
+
+
+/*=================show post page=================*/
+.showPost {
+  margin: 0 auto;
+  padding: 20px;
+}
