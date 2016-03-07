@@ -6,7 +6,6 @@ app.controller('userController', function($scope, $location, $auth, $http, users
   }
   users.getUserData().then(function(result){
     $scope.user = result;
-
   })
 
   users.getPosts().then(function(result){
@@ -17,6 +16,7 @@ app.controller('userController', function($scope, $location, $auth, $http, users
     users.getUserData().then(function(result){
       var post = {};
       post.facebook_id = result.facebook_id;
+      post.author = result.name
       post.title = $scope.title
       post.address = $scope.address
       post.want = $scope.want
