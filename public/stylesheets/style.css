@@ -31,7 +31,7 @@ body {
   font-family: 'Quicksand';
   font-weight: 700;
   font-style: italic;
-  background: rgb(254, 251, 247);
+  background: gray;
 }
 #splashBackground {
   position: fixed;
@@ -51,6 +51,7 @@ body {
   min-width: 50%;
   min-height: 50%;
   z-index: -1000;
+  opacity: .5;
 }
 .splashContainer{
   height: 170vh;
@@ -87,7 +88,7 @@ h2.backToTop {
 h1.splashPageAboutTitle {
   font-family: 'JennaSue';
   font-weight: 700;
-  background: rgba(254, 251, 247, .6);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
   padding: 10px;
   border-radius: 20px;
 }
@@ -95,7 +96,7 @@ h1.splashPageAboutTitle {
   font-family: 'JennaSue';
   font-weight: bold;
   font-size: 40px;
-  background: rgba(254, 251, 247, .6);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
   padding: 10px;
   border-radius: 20px;
 }
@@ -135,7 +136,6 @@ h1.splashPageAboutTitle {
 }
 .backgroundColor {
   background: #FEFBF7;
-  height: 100vh;
 }
 .welcomeUser {
   font-family: 'JennaSue';
@@ -170,6 +170,9 @@ h1.splashPageAboutTitle {
   border: 1px solid black;
   border-radius: 20px;
 }
+.eachPost:last-child{
+  margin-bottom: 40px; 
+}
 .learnMore{
   margin-top: 60px;
   font-family: lobster;
@@ -193,9 +196,12 @@ h1.splashPageAboutTitle {
 /*------------newForm----------------*/
 form {
   width: 80%;
-  margin: 0 auto;
+  margin: 40px auto;
   font-size: 30px;
   font-weight: 700;
+  background: #fefbf7;
+  padding: 40px;
+  border-radius: 20px;
 }
 label {
   font-family: 'JennaSue';
