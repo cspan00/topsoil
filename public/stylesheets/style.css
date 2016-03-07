@@ -134,6 +134,19 @@ h1.splashPageAboutTitle {
 .postThumbnail{
   width: 100px;
   height: 100px;
+  border-radius: 20px;
+}
+.media-body {
+  padding-left: 15px;
+}
+.postTitle {
+  font-family: 'fff_tusjbold';
+}
+.postAuthor {
+  font-family: 'JennaSue';
+}
+.eachPost {
+  padding-top: 40px;
 }
 .learnMore{
   margin-top: 60px;

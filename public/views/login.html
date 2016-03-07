@@ -7,7 +7,6 @@
     </div>
       <a ng-click="logout()" href = "/#/" class="btn btn-primary btn-facebook facebookButton pull-right"><i class="fa fa-facebook-official"></i>Logout</a>
       <a class="createListingButton btn btn-primary pull-right" href="/#/new">Create a Listing</a>
-
       <!-- <p class="dropdown pull-right">Connect -->
         <!-- <img src="https://maxcdn.icons8.com/Android_L/PNG/24/Arrows/expand_arrow-24.png" class="expandArrow" title="Expand Arrow" width="27"> -->
       <!-- </p> -->
@@ -16,28 +15,34 @@
 
 <div class="backgroundColor">
   <div class="row-fluid postBodyFont">
-    <div class="media">
-    </div>
-    <div class="media-left">
-      <p class="welcomeUser">Welcome, {{user.first_name}}!</p>
-      <img class="profilePicture" src="{{user.image_url}}">
+    <div class="col-md-3">
+      <div class="media-left">
+        <p class="welcomeUser">Welcome, {{user.first_name}}!</p>
+        <img class="profilePicture" src="{{user.image_url}}">
+      </div>
     </div>
 
-    <div class="media-body">
-      <div ng-repeat = "post in posts">
-        <div class="media">
-          <div class="media-left">
-            <a href="#">
-              <img class="media-object postThumbnail" src="{{post.picture_url}}" alt="...">
-            </a>
-          </div>
-          <div class="media-body">
-            <h2 class="media-heading">{{post.title}}</h2>
-              <h4 class="media-heading"> By {{post.author}} </h4>
-            {{post.description}}
+    <div class="row">
+      <div class="col-md-8">
+        <div class="media-body">
+          <div ng-repeat = "post in posts" class="eachPost">
+            <div class="media">
+              <div class="media-left">
+                <a href="#">
+                  <img class="media-object postThumbnail" src="{{post.picture_url}}" alt="profile picture">
+                </a>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading postTitle">{{post.title}}</h3>
+                <h3 class="media-heading postAuthor"> By {{post.author}} </h3>
+                {{post.description}}
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
+
     </div>
   </div>
 
