@@ -15,6 +15,11 @@
 }
 
 @font-face {
+    font-family: 'Raleway-Light';
+    src: url('fonts/Raleway-Light.otf') format('truetype');
+}
+
+@font-face {
     font-family: 'JennaSue';
     src: url('fonts/JennaSue.ttf') format('truetype');
     font-weight: normal;
@@ -103,7 +108,9 @@ h1.splashPageAboutTitle {
 }
 .headerTitle {
   font-size: 30px;
-  font-family: 'fff_tusjbold';
+  font-family: 'JennaSue';
+  font-weight: 700;
+  font-size: 40px;
 }
 .expandArrow {
   color: #f6fcf2;
@@ -172,9 +179,6 @@ h1.splashPageAboutTitle {
   top: 1300px;
   max-width: 70%;
   margin-left: 150px;
-}
-.homeIcon {
-  padding-right: 50px;
 }
 .homeIconLink {
   color: #fefbf7;
