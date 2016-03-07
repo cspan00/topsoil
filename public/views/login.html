@@ -7,9 +7,13 @@
     </div>
       <a ng-click="logout()" href = "/#/" class="btn btn-primary btn-facebook facebookButton pull-right"><i class="fa fa-facebook-official"></i>Logout</a>
       <a class="createListingButton btn btn-primary pull-right" href="/#/new"><span><img src="../images/american-mountain-ash.png" class="three-twigs" width="30px"></span>Create a Listing</a>
+      <!-- Search by Want/Need: -->
       <!-- <p class="dropdown pull-right">Connect -->
         <!-- <img src="https://maxcdn.icons8.com/Android_L/PNG/24/Arrows/expand_arrow-24.png" class="expandArrow" title="Expand Arrow" width="27"> -->
       <!-- </p> -->
+
+      <input type="text" class="searchByWantNeed pull-right" ng-model="search.want">
+      <span class="pull-right searchbyWantNeedLabel">search by want/need</span>
   </div>
 </nav>
 
@@ -25,7 +29,7 @@
     <div class="row">
       <div class="col-md-8">
         <div class="media-body">
-          <div ng-repeat = "post in posts" class="eachPost">
+          <div ng-repeat = "post in posts | filter:{'want': search.want}" class="eachPost">
             <div class="media">
               <div class="media-left">
                 <a href="#">

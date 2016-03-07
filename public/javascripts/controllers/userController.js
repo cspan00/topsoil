@@ -14,6 +14,7 @@ app.controller('userController', function($scope, $location, $auth, $http, users
     $scope.posts = result;
   })
 
+
   $scope.submitPost = function(){
     users.getUserData().then(function(result){
       var post = {};
@@ -32,5 +33,7 @@ app.controller('userController', function($scope, $location, $auth, $http, users
     })
 
   }
+
+
 
 });

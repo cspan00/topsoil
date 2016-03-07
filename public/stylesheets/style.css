@@ -68,10 +68,15 @@ h1.pageTitle {
   font-size: 100px;
   font-family: 'fff_tusjbold';
 }
-h2.learnMore, h2.backToTop {
+h2.learnMore {
   font-family: 'JennaSue';
   font-weight: 700;
   font-size: 60px;
+  color: #faebd7;
+}
+h2.backToTop {
+  font-family: 'JennaSue';
+  font-weight: 700;
   color: #faebd7;
 }
 h1.splashPageAboutTitle {
@@ -135,7 +140,7 @@ h1.splashPageAboutTitle {
   display: block;
   font-family: 'JennaSue';
   font-size: 25px;
-  font-weight: 700; 
+  font-weight: 700;
 }
 .postThumbnail{
   width: 100px;
@@ -179,7 +184,26 @@ h1.splashPageAboutTitle {
 .postBodyFont {
   font-family: 'Quicksand';
 }
-
+.searchByWantNeed {
+  height: 5vh;
+  color: #FEFBF7;
+  background: black;
+  border: none;
+  font-size: 25px;
+  margin: 10px;
+  font-weight: 400;
+  font-family: 'JennaSue';
+}
+.searchByWantNeed:hover {
+  -webkit-appearance:none;
+  border: 2px solid #FEFBF7;
+}
+.searchbyWantNeedLabel {
+  margin-top: -25px;
+  font-family: 'JennaSue';
+  font-size: 22px;
+  font-size: 700;
+}
 /*------------newForm----------------*/
 form {
   width: 80%;
