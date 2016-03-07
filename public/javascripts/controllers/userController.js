@@ -1,5 +1,10 @@
 app.controller('userController', function($scope, $location, $auth, $http, users){
 
+  // $scope.checkboxModel = {
+  //   value1 : 'needs',
+  //   value2 : 'has'
+  // };
+
   $scope.logout = function(){
     $auth.logout()
     console.log("successfully logged out!");

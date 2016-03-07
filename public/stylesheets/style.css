@@ -112,7 +112,7 @@ h1.splashPageAboutTitle {
   border-radius: 30px;
   padding-left: 10px;
 }
-.facebookButton, .createListingButton {
+.facebookButton, .createListingButton, .checkboxLabelText {
   background-color: #FEFBF7;
   color: black;
   border: none;
@@ -121,7 +121,7 @@ h1.splashPageAboutTitle {
   font-weight: 500;
   font-family: 'JennaSue';
 }
-.facebookButton:hover, .createListingButton:hover {
+.facebookButton:hover, .createListingButton:hover, .checkboxLabelText:hover {
   color: #61B329;
   background-color: black;
   font-family: 'JennaSue'
@@ -141,11 +141,12 @@ h1.splashPageAboutTitle {
   font-family: 'JennaSue';
   font-size: 25px;
   font-weight: 700;
+  padding: 15px;
 }
 .postThumbnail{
   width: 100px;
   height: 100px;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 .media-body {
   padding-left: 15px;
@@ -184,26 +185,11 @@ h1.splashPageAboutTitle {
 .postBodyFont {
   font-family: 'Quicksand';
 }
-.searchByWantNeed {
-  height: 5vh;
-  color: #FEFBF7;
-  background: black;
-  border: none;
+/*.checkboxLabelText {
   font-size: 25px;
-  margin: 10px;
-  font-weight: 400;
+  margin: 0 10px;
   font-family: 'JennaSue';
-}
-.searchByWantNeed:hover {
-  -webkit-appearance:none;
-  border: 2px solid #FEFBF7;
-}
-.searchbyWantNeedLabel {
-  margin-top: -25px;
-  font-family: 'JennaSue';
-  font-size: 22px;
-  font-size: 700;
-}
+}*/
 /*------------newForm----------------*/
 form {
   width: 80%;
