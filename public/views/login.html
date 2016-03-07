@@ -20,8 +20,7 @@
         <p class="welcomeUser">Welcome, {{user.first_name}}!</p>
         <img class="profilePicture" src="{{user.image_url}}">
       </div>
-
-        <div class="media-body">
+          
           <div ng-repeat = "post in posts | filter:{'want': search.want}" class="eachPost">
             <div class="media">
               <div class="media-left">
@@ -37,7 +36,6 @@
               </div>
             </div>
           </div>
-        </div>
 
   </div>
 
