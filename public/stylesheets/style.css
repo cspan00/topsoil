@@ -170,6 +170,7 @@ h1.splashPageAboutTitle {
   padding: 20px;
   border: 1px solid black;
   border-radius: 20px;
+  max-width: 90%;
 }
 .eachPost:last-child{
   margin-bottom: 40px;
