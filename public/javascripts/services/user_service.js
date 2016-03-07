@@ -13,17 +13,13 @@ this.getPosts = function(){
   return $http.get('posts').then(function(response){
     return response.data;
   })
+};
+
+this.getShowPost = function(id){
+  return $http.get('post/'+id).then(function(response){
+    return response.data
+  })
 }
-
-this.getUserDB = function(){}
-
-
-
-
-
-
-
-
 
 
 

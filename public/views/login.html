@@ -21,6 +21,7 @@
         <img class="profilePicture" src="{{user.image_url}}">
       </div>
     </div>
+
     <div class="row-fluid">
       <div class="col-md-8">
         <div ng-repeat = "post in posts | filter:{'want': search.want}" class="eachPost">
@@ -31,7 +32,7 @@
               </a>
             </div>
             <div class="media-body">
-              <h3 class="media-heading postTitle">{{post.title}}</h3>
+              <a href="/#/show/{{post.id}}"><h3 class="media-heading postTitle" ng-click="getPostId()">{{post.title}}</h3></a>
               <p class="pull-right booleanValue">{{post.want? 'Needs Land':'Has Land'}}</p>
               <h3 class="media-heading postAuthor"> By {{post.author}}</h3>
               <p>{{post.description}}</p>

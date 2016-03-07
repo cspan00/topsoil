@@ -79,6 +79,13 @@ router.post('/post', function(req, res, next){
   })
 })
 
+router.get('/post/:id', function(req, res, next){
+  Posts().where('id', req.params.id).first().then(function(response){
+    res.send(response)
+  })
+})
+
+
 
 })
 

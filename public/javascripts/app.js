@@ -29,4 +29,8 @@ app.config(function ($routeProvider, $authProvider) {
     templateUrl: 'views/new.html',
     controller: 'userController'
   })
+  .when('/show/:id',{
+    templateUrl: 'views/show.html',
+    controller: 'showController'
+  })
 })
