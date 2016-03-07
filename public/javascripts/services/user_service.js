@@ -15,6 +15,8 @@ this.getPosts = function(){
   })
 }
 
+this.getUserDB = function(){}
+
 
 
 

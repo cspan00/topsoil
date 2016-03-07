@@ -4,10 +4,12 @@ exports.up = function(knex, Promise) {
     t.increments();
     t.string('user_id');
     t.string('facebook_id');
+    t.string('author')
     t.string('title')
     t.string('address');
     t.string('lat');
     t.string('lng')
+    t.boolean('want')
     t.text('picture_url')
     t.text('description')
     t.timestamps();

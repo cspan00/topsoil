@@ -1,4 +1,4 @@
-$(document).ready(function(){
+
 
 
   $(document).on('click', '.learnMore', function() {
@@ -7,5 +7,3 @@ $(document).ready(function(){
           scrollTop: (Math.floor($(window).scrollTop() / vheight)+1) * vheight
         }, 1000);
   })
-
-})

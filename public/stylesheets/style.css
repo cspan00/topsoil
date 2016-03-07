@@ -77,13 +77,15 @@ h2.learnMore {
 h1.splashPageAboutTitle {
   font-family: 'JennaSue';
   font-weight: 700;
-  background: rgba(254, 251, 247, .8);
+  background: rgba(254, 251, 247, .2);
   padding: 10px;
   border-radius: 20px;
 }
 .splashPageSummary {
   font-family: 'JennaSue';
-  background: rgba(254, 251, 247, .8);
+  font-weight: bold;
+  font-size: 40px;
+  background: rgba(254, 251, 247, .2);
   padding: 10px;
   border-radius: 20px;
 }
@@ -139,7 +141,9 @@ h1.splashPageAboutTitle {
 }
 .pageInfo{
   position: absolute;
-  top: 1000px;
+  top: 1300px;
+  max-width: 70%;
+  margin-left: 150px;
 }
 .homeIcon {
   padding-right: 50px;
@@ -180,7 +184,7 @@ label, .styled-select {
   width: 100px;
   background-color: black;
   font-family: 'JennaSue';
-  padding: 0 10px; 
+  padding: 0 10px;
 }
 .newFormSubmitButton:hover {
   color: #fefbf7;
