@@ -68,7 +68,7 @@ h1.pageTitle {
   font-size: 100px;
   font-family: 'fff_tusjbold';
 }
-h2.learnMore {
+h2.learnMore, h2.backToTop {
   font-family: 'JennaSue';
   font-weight: 700;
   font-size: 60px;
@@ -149,7 +149,7 @@ h1.splashPageAboutTitle {
   margin-top: 40px;
   padding: 20px;
   border: 1px solid black;
-  border-radius: 20px; 
+  border-radius: 20px;
 }
 .learnMore{
   margin-top: 60px;
