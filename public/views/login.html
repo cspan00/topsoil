@@ -35,7 +35,7 @@
               <a href="/#/show/{{post.id}}"><h3 class="media-heading postTitle" ng-click="getPostId()">{{post.title}}</h3></a>
               <p class="pull-right booleanValue">{{post.want? 'Needs Land':'Has Land'}}</p>
               <h3 class="media-heading postAuthor"> By {{post.author}}</h3>
-              <p>{{post.description}}</p>
+              <p>{{post.description | limitTo: 150}} ...</p>
             </div>
           </div>
         </div>
