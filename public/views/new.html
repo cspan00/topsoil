@@ -3,8 +3,8 @@
     <div class="navbar-header headerTitle">
         <a href="/#/" class="homeIconLink"><i class="fa fa-2x fa-home homeIcon"></i></a> Connect Share Grow
     </div>
-    <a class="createListingButton btn btn-primary pull-right" href="/#/profile">Listings Page</a>
     <a ng-click="logout()" href = "/#/" class="btn btn-primary btn-facebook facebookButton pull-right"><i class="fa fa-facebook-official"></i>Logout</a>
+    <a class="createListingButton btn btn-primary pull-right" href="/#/profile"><img src="images/american-mountain-ash.png" width="33px">Listings Page</a>
   </div>
 </nav>
 
@@ -21,9 +21,27 @@
         </div>
 
         <div>
-          <label for="address">Address</label>
-          <input class="form-control" type="text" id="address" placeholder="Street, City, State, Zip" ng-model="address">
+          <label for="street">Street</label>
+          <input class="form-control" type="text" id="street" placeholder="Street" ng-model="street">
         </div>
+
+        <div>
+          <label for="city">City</label>
+          <input class="form-control" type="text" id="city" placeholder="City" ng-model="city">
+        </div>
+
+        <div>
+          <label for="state">State:</label>
+          <select ng-model="state">
+            <option ng-repeat="state in ['AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'IA', 'ID', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY']">{{state}}</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="zipcode">Zipcode</label>
+          <input class="form-control" type="text" id="zipcode" placeholder="Zipcode" ng-model="zipcode">
+        </div>
+
 
         <div>
           <label for="picture_url">Add a Photo</label>
