@@ -76,7 +76,6 @@ router.get('/posts', function(req, res, next){
 router.post('/post', function(req, res, next){
   Posts().insert(req.body).then(function(response){
     res.send("succesful post - you did it damn it you did it!")
-    res.redirect('')
   })
 })
 
