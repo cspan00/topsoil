@@ -1,6 +1,7 @@
 app.controller('userController', function($scope, $location, $auth, $http, users){
 
   $scope.want = "true";
+  $scope.state = "AK";
 
   $scope.logout = function(){
     $auth.logout()
@@ -23,7 +24,7 @@ app.controller('userController', function($scope, $location, $auth, $http, users
       post.facebook_id = result.facebook_id;
       post.author = result.name
       post.title = $scope.title
-      post.address = $scope.address
+      post.address = $scope.street + " " + $scope.city + " " + $scope.state + " " + $scope.zipcode
       post.picture_url = $scope.picture_url
       post.want = $scope.want
       post.description = $scope.description
