@@ -141,7 +141,7 @@ h1.splashPageAboutTitle {
   font-family: 'JennaSue';
   font-size: 25px;
   font-weight: 700;
-  padding: 15px;
+  margin-right: 6px; 
 }
 .postThumbnail{
   width: 100px;
