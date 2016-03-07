@@ -23,6 +23,7 @@ app.controller('userController', function($scope, $location, $auth, $http, users
       post.description = $scope.description
       $http.post('post', post).then(function(response){
         console.log(response);
+        window.location.href = '/#/profile';
       })
 
     })

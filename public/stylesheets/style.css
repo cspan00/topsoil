@@ -77,7 +77,7 @@ h2.learnMore {
 h1.splashPageAboutTitle {
   font-family: 'JennaSue';
   font-weight: 700;
-  background: rgba(254, 251, 247, .2);
+  background: rgba(254, 251, 247, .6);
   padding: 10px;
   border-radius: 20px;
 }
@@ -85,7 +85,7 @@ h1.splashPageAboutTitle {
   font-family: 'JennaSue';
   font-weight: bold;
   font-size: 40px;
-  background: rgba(254, 251, 247, .2);
+  background: rgba(254, 251, 247, .6);
   padding: 10px;
   border-radius: 20px;
 }
