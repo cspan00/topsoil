@@ -52,9 +52,9 @@ body {
   margin: 0 auto;
 }
 .splashPageFacebookButton {
-  margin: 30px;
-  width: 230px;
-  font-size: 30px;
+  margin-top: 30px;
+  width: 150px;
+  font-size: 20px;
   color: #FEFBF7;
   font-family: 'JennaSue';
 }
@@ -141,7 +141,7 @@ h1.splashPageAboutTitle {
   font-family: 'JennaSue';
   font-size: 25px;
   font-weight: 700;
-  margin-right: 6px; 
+  margin-right: 6px;
 }
 .postThumbnail{
   width: 100px;
