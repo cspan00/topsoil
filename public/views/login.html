@@ -14,33 +14,35 @@
 
 <div class="backgroundColor">
   <div class="row-fluid postBodyFont">
-    <div class="media">
-    </div>
+    <div class="col-md-3">
+      <div class="media">
+      </div>
       <div class="media-left">
         <p class="welcomeUser">Welcome, {{user.first_name}}!</p>
         <img class="profilePicture" src="{{user.image_url}}">
       </div>
+    </div>
 
-        <div class="media-body">
-          <div ng-repeat = "post in posts | filter:{'want': search.want}" class="eachPost">
-            <div class="media">
-              <div class="media-left">
-                <a href="#">
-                  <img class="media-object postThumbnail" src="{{post.picture_url}}" alt="profile picture">
-                </a>
-              </div>
-              <div class="media-body">
-                <h3 class="media-heading postTitle">{{post.title}}</h3>
-                <p class="pull-right booleanValue">{{post.want? 'Needs Land':'Has Land'}}</p>
-                <h3 class="media-heading postAuthor"> By {{post.author}}</h3>
-                {{post.description}}
-              </div>
+    <div class="row-fluid">
+      <div class="col-md-8">
+        <div ng-repeat = "post in posts | filter:{'want': search.want}" class="eachPost">
+          <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <img class="media-object postThumbnail" src="{{post.picture_url}}" alt="profile picture">
+              </a>
+            </div>
+            <div class="media-body">
+              <h3 class="media-heading postTitle">{{post.title}}</h3>
+              <p class="pull-right booleanValue">{{post.want? 'Needs Land':'Has Land'}}</p>
+              <h3 class="media-heading postAuthor"> By {{post.author}}</h3>
+              {{post.description}}
             </div>
           </div>
         </div>
-
+      </div>
+    </div>
   </div>
-
 </div>
 
 
