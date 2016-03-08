@@ -1,4 +1,4 @@
-var app = angular.module('topsoil', ['ngRoute', 'satellizer', 'ngMessages']);
+var app = angular.module('topsoil', ['ngRoute', 'satellizer', 'ngMessages', 'ngAnimate']);
 
 // production clientId: 1668067083447238
 // dev clientId: 449685485222786
