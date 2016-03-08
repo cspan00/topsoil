@@ -32,10 +32,10 @@
               </a>
             </div>
             <div class="media-body">
-              <a href="/#/show/{{post.id}}"><h3 class="media-heading postTitle" ng-click="getPostId()">{{post.title}}</h3></a>
+              <a href="/#/show/{{post.id}}" class="linkToShowPage"><h3 class="media-heading postTitle" ng-click="getPostId()">{{post.title}}</h3></a>
               <p class="pull-right booleanValue">{{post.want? 'Needs Land':'Has Land'}}</p>
               <h3 class="media-heading postAuthor"> By {{post.author}}</h3>
-              <p>{{post.description | limitTo: 150}} ...</p>
+              <p>{{post.description | limitTo: 150}} <a href="/#/show/{{post.id}}" class="linkToShowPage"><span class="readMore">...(read more)...</span></a></p>
             </div>
           </div>
         </div>

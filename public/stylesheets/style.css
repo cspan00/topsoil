@@ -190,6 +190,16 @@ h1.splashPageAboutTitle {
 .postBodyFont {
   font-family: 'Quicksand';
 }
+.linkToShowPage {
+  color: black;
+}
+.linkToShowPage:hover {
+  color: #61B329;
+  text-decoration: none;
+}
+.readMore {
+  font-size: 12px; 
+}
 /*------------newForm----------------*/
 form {
   width: 80%;
@@ -231,6 +241,10 @@ label {
   margin: 0 auto;
   padding: 20px;
 }
+.individualPostDiv {
+  width: 80%;
+  margin: 0 auto;
+}
 /*-------------------------profile of user page -------------------*/
 .profilePagePicture {
   border-radius: 30px;
@@ -245,5 +259,5 @@ label {
 .profilePoints {
   font-family: 'fff_tusjbold';
   font-size: 30px;
-  margin-top: 30px; 
+  margin-top: 30px;
 }

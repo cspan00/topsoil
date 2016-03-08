@@ -9,23 +9,13 @@
   </div>
 </nav>
 
-<div class="container">
-  <div class="col-lg-12 centered">
-    <div class="showPost">
-      <div class="media">
-        <div class="media-left">
-          <a href="#">
-            <img class="media-object postThumbnail" src="{{showPost.picture_url}}" alt="profile picture">
-          </a>
-        </div>
-        <div class="media-body">
-          <h3 class="media-heading postTitle" ng-click="getPostId()">{{showPost.title}}</h3>
-          <p class="pull-right booleanValue">{{showPost.want? 'Needs Land':'Has Land'}}</p>
-          <h3 class="media-heading postAuthor"> By {{showPost.author}}</h3>
-          <p>{{showPost.description}}</p>
-          <a href="/#/profile/{{showPost.facebook_id}}">Contact User</a>
-        </div>
-      </div>
-    </div>
-  </div>
+
+
+<div class="individualPostDiv">
+  <img src="{{showPost.picture_url}}"  class="img-responsive center-block profilePagePicture" />
+  <p class="profilePoints text-center" ng-click="getPostId()">{{showPost.title}}</p>
+  <p class="profilePoints text-center">{{showPost.want? 'Needs Land':'Has Land'}}</p>
+  <h3 class="profilePoints text-center"> By {{showPost.author}}</h3>
+  <p class="text-center">{{showPost.description}}</p>
+  <a href="/#/profile/{{showPost.facebook_id}}" class="text-center">Contact User</a>
 </div>
