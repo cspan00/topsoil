@@ -9,58 +9,65 @@
 </nav>
 
 
-  <div class="form" name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
-    <form ng-submit = "submitPost()">
-      <div class="errors">
-        <p class="errorMessage"></p>
+<form name="userForm" class="css-form" ng-submit="userForm.$valid && submitPost()" novalidate>
+  <fieldset class="form-group">
+      <label for="title">Title</label>
+      <input class="form-control" type="text" id="title" name="title" placeholder="Post Title" ng-model="title" required="">
+      <div ng-show="userForm.$submitted || userForm.title.$touched">
+        <div class="errorMessage" ng-show="userForm.title.$error.required">This post needs a Title.</div>
       </div>
-      <div class="form-group">
-        <div>
-          <label for="title">Title</label>
-          <input class="form-control" type="text" id="title" placeholder="Post Title" ng-model="title" required>
-        </div>
+  </fieldset>
 
-        <div>
-          <label for="street">Street</label>
-          <input class="form-control" type="text" id="street" placeholder="Street" ng-model="street">
-        </div>
+  <fieldset class="form-group">
+    <label for="street">Street</label>
+    <input class="form-control" type="text" id="street" name="street" placeholder="Street" ng-model="street" required="">
+    <div ng-show="userForm.$submitted || userForm.street.$touched">
+      <div class="errorMessage" ng-show="userForm.street.$error.required">Please enter Street Name.</div>
+    </div>
+  </fieldset>
 
-        <div>
-          <label for="city">City</label>
-          <input class="form-control" type="text" id="city" placeholder="City" ng-model="city">
-        </div>
+  <fieldset class="form-group">
+    <label for="city">City</label>
+    <input class="form-control" type="text" id="city" name="city" placeholder="City" ng-model="city" required>
+    <div ng-show="userForm.$submitted || userForm.city.$touched">
+      <div class="errorMessage" ng-show="userForm.city.$error.required">Please enter the City.</div>
+    </div>
+  </fieldset>
 
-        <div>
-          <label for="state">State:</label>
-          <select ng-model="state">
-            <option ng-repeat="state in ['AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'IA', 'ID', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY']">{{state}}</option>
-          </select>
-        </div>
+  <fieldset class="form-group">
+    <label for="state">State:</label>
+    <select ng-model="state">
+      <option ng-repeat="state in ['AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'IA', 'ID', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY']">{{state}}</option>
+    </select>
+  </fieldset>
 
-        <div>
-          <label for="zipcode">Zipcode</label>
-          <input class="form-control" type="text" id="zipcode" placeholder="Zipcode" ng-model="zipcode">
-        </div>
+  <fieldset class="form-group">
+    <label for="zipcode">Zipcode</label>
+    <input class="form-control" type="text" id="zipcode" name="zipcode" placeholder="Zipcode" ng-model="zipcode" required>
+    <div ng-show="userForm.$submitted || userForm.zipcode.$touched">
+      <div class="errorMessage" ng-show="userForm.zipcode.$error.required">Please enter the City.</div>
+    </div>
+  </fieldset>
 
+  <fieldset class="form-group">
+    <label for="picture_url">Add a Photo</label>
+    <input class="form-control" type="text" id="picture_url" placeholder="add photo link" ng-model="picture_url">
+  </fieldset>
 
-        <div>
-          <label for="picture_url">Add a Photo</label>
-          <input class="form-control" type="text" id="picture_url" placeholder="add photo link" ng-model="picture_url">
-        </div>
+  <fieldset class="form-group">
+    <label for="description">Description</label>
+    <textarea rows="5" class="form-control" name="description" type="text" id="description" placeholder="briefly describe what you are looking for and or offering" ng-model="description" required></textarea>
+    <div ng-show="userForm.$submitted || userForm.description.$touched">
+      <div class="errorMessage" ng-show="userForm.description.$error.required">Please add a Description.</div>
+    </div>
+  </fieldset>
 
-        <div>
-          <label for="description">Description</label>
-          <textarea rows="5" class="form-control" type="text" id="description" placeholder="briefly describe what you are looking for and or offering" ng-model="description"></textarea>
-        </div>
+  <fieldset class="form-group styled-select">
+    <select ng-model="want"><optgroup>
+      <option value="true" selected="selected">Needs Land</option>
+      <option value="false">Wants Land</option>
+    </optgroup></select>
+  </fieldset>
 
-        <div class="styled-select">
-          <select ng-model="want"><optgroup>
-            <option value="true" selected="selected">Needs Land</option>
-            <option value="false">Wants Land</option>
-          </optgroup></select>
-        </div>
-
-        <button class="btn btn-primary newFormSubmitButton" type="submit">Submit</button>
-      </div>
-    </form>
-  </div>
+    <button class="btn btn-primary newFormSubmitButton" type="submit">Submit</button>
+</form>

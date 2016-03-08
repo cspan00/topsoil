@@ -234,6 +234,17 @@ label {
   background-color: #61b329;
   border: none;
 }
+
+.css-form input.ng-invalid.ng-touched {
+    background-color: #FA787E;
+  }
+.css-form input.ng-valid.ng-touched {
+  background-color: #78FA89;
+}
+.errorMessage {
+  font-size: 15px;
+  color: #FA787E;
+}
 /*=================show post page=================*/
 .showPost {
   margin: 0 auto;
@@ -247,7 +258,7 @@ label {
   color: black;
   font-family: 'JennaSue';
   font-size: 50px;
-  margin: 30px; 
+  margin: 30px;
 }
 .contactUser:hover {
   color: #61B329;

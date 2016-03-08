@@ -1,7 +1,12 @@
 app.controller('userController', function($scope, $location, $auth, $http, users){
+
   $scope.getPostId = users.getPostId;
   $scope.want = "true";
   $scope.state = "AK";
+
+
+// form validations
+
 
   $scope.logout = function(){
     $auth.logout()
