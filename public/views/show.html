@@ -12,7 +12,7 @@
 
 
 <div class="individualPostDiv">
-  <h3 class="profileAuthorLandNeed text-center">{{showPost.author}} | {{showPost.want? 'Needs Land':'Has Land'}} </h3>
+  <h3 class="profileAuthorLandNeed text-center">{{showPost.author}}: {{showPost.want? 'Needs Land':'Has Land'}} </h3>
   <!-- <p class="profilePoints text-center">{{showPost.want? 'Needs Land':'Has Land'}}</p> -->
   <img src="{{showPost.picture_url}}"  class="img-responsive center-block profilePagePicture" />
   <p class="profilePoints text-center" ng-click="getPostId()">{{showPost.title}}</p>
