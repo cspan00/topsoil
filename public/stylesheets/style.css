@@ -198,7 +198,7 @@ h1.splashPageAboutTitle {
   text-decoration: none;
 }
 .readMore {
-  font-size: 12px; 
+  font-size: 12px;
 }
 /*------------newForm----------------*/
 form {
@@ -234,8 +234,6 @@ label {
   background-color: #61b329;
   border: none;
 }
-
-
 /*=================show post page=================*/
 .showPost {
   margin: 0 auto;
@@ -245,12 +243,30 @@ label {
   width: 80%;
   margin: 0 auto;
 }
+.contactUser {
+  color: black;
+  font-family: 'JennaSue';
+  font-size: 50px;
+  margin: 30px; 
+}
+.contactUser:hover {
+  color: #61B329;
+  text-decoration: none;
+}
+.profileAuthorLandNeed {
+  font-size: 50px;
+  font-family: 'JennaSue';
+  font-weight: 700;
+}
 /*-------------------------profile of user page -------------------*/
 .profilePagePicture {
   border-radius: 30px;
   padding-left: 10px;
   justify-content: center;
   margin-bottom: 30px;
+  margin-top: 30px;
+  width: 300px;
+  height: auto;
 }
 .profilePageUserName {
   font-size: 50px;

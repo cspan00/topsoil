@@ -12,10 +12,10 @@
 
 
 <div class="individualPostDiv">
+  <h3 class="profileAuthorLandNeed text-center">{{showPost.author}} | {{showPost.want? 'Needs Land':'Has Land'}} </h3>
+  <!-- <p class="profilePoints text-center">{{showPost.want? 'Needs Land':'Has Land'}}</p> -->
   <img src="{{showPost.picture_url}}"  class="img-responsive center-block profilePagePicture" />
   <p class="profilePoints text-center" ng-click="getPostId()">{{showPost.title}}</p>
-  <p class="profilePoints text-center">{{showPost.want? 'Needs Land':'Has Land'}}</p>
-  <h3 class="profilePoints text-center"> By {{showPost.author}}</h3>
   <p class="text-center">{{showPost.description}}</p>
-  <a href="/#/profile/{{showPost.facebook_id}}" class="text-center">Contact User</a>
+  <a href="/#/profile/{{showPost.facebook_id}}" class="contactUser"><p class="text-center">Contact User</p></a>
 </div>
