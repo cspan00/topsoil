@@ -12,25 +12,28 @@
 <form name="userForm" class="css-form" ng-submit="userForm.$valid && submitPost()" novalidate>
   <fieldset class="form-group">
       <label for="title">Title</label>
-      <input class="form-control" type="text" id="title" name="title" placeholder="Post Title" ng-model="title" required="">
-      <div ng-show="userForm.$submitted || userForm.title.$touched">
-        <div class="errorMessage" ng-show="userForm.title.$error.required">This post needs a Title.</div>
+      <input class="form-control" type="text" id="title" name="title" placeholder="Post Title" ng-model="title" required minlength="3">
+      <div ng-show="userForm.$submitted || userForm.title.$touched" ng-messages="userForm.title.$error" role="alert">
+        <div class="errorMessage" ng-message="required">Please enter a value for this field.</div>
+        <div class="errorMessage" ng-message="minlength">This field must be at least 3 characters long.</div>
       </div>
   </fieldset>
 
   <fieldset class="form-group">
     <label for="street">Street</label>
-    <input class="form-control" type="text" id="street" name="street" placeholder="Street" ng-model="street" required="">
-    <div ng-show="userForm.$submitted || userForm.street.$touched">
-      <div class="errorMessage" ng-show="userForm.street.$error.required">Please enter Street Name.</div>
+    <input class="form-control" type="text" id="street" name="street" placeholder="Street" ng-model="street" required minlength="5">
+    <div ng-show="userForm.$submitted || userForm.street.$touched" ng-messages="userForm.street.$error" role="alert">
+      <div class="errorMessage" ng-message="required">Please enter a value for this field.</div>
+      <div class="errorMessage" ng-message="minlength">This field must be at least 5 characters long.</div>
     </div>
   </fieldset>
 
   <fieldset class="form-group">
     <label for="city">City</label>
-    <input class="form-control" type="text" id="city" name="city" placeholder="City" ng-model="city" required>
-    <div ng-show="userForm.$submitted || userForm.city.$touched">
-      <div class="errorMessage" ng-show="userForm.city.$error.required">Please enter the City.</div>
+    <input class="form-control" type="text" id="city" name="city" placeholder="City" ng-model="city" required ng-minlength="2">
+    <div ng-show="userForm.$submitted || userForm.city.$touched" ng-messages="userForm.city.$error" role="alert">
+      <div class="errorMessage" ng-message="required">Please enter a value for this field.</div>
+      <div class="errorMessage" ng-message="minlength">This field must be at least 2 characters long.</div>
     </div>
   </fieldset>
 
@@ -43,9 +46,10 @@
 
   <fieldset class="form-group">
     <label for="zipcode">Zipcode</label>
-    <input class="form-control" type="text" id="zipcode" name="zipcode" placeholder="Zipcode" ng-model="zipcode" required>
-    <div ng-show="userForm.$submitted || userForm.zipcode.$touched">
-      <div class="errorMessage" ng-show="userForm.zipcode.$error.required">Please enter the City.</div>
+    <input class="form-control" type="text" id="zipcode" name="zipcode" placeholder="Zipcode" ng-model="zipcode" required ng-minlength="5">
+    <div ng-show="userForm.$submitted || userForm.zipcode.$touched" ng-messages="userForm.zipcode.$error" role="alert">
+      <div class="errorMessage" ng-message="required">Please enter a value for this field.</div>
+      <div class="errorMessage" ng-message="minlength">This field must be at least 5 characters long.</div>
     </div>
   </fieldset>
 
@@ -56,9 +60,11 @@
 
   <fieldset class="form-group">
     <label for="description">Description</label>
-    <textarea rows="5" class="form-control" name="description" type="text" id="description" placeholder="briefly describe what you are looking for and or offering" ng-model="description" required></textarea>
-    <div ng-show="userForm.$submitted || userForm.description.$touched">
-      <div class="errorMessage" ng-show="userForm.description.$error.required">Please add a Description.</div>
+    <textarea rows="5" class="form-control" name="description" type="text" id="description" placeholder="briefly describe what you are looking for and or offering" ng-model="description" required ng-minlength="5" ng-maxlength="1000"></textarea>
+    <div ng-show="userForm.$submitted || userForm.description.$touched" ng-messages="userForm.description.$error" role="alert">
+      <div class="errorMessage" ng-message="required">Please enter a value for this field.</div>
+      <div class="errorMessage" ng-message="minlength">This field must be at least 5 characters long.</div>
+      <div class="errorMessage" ng-message="maxlength">This field must be less than 1000 characters.</div>
     </div>
   </fieldset>
 
