@@ -13,5 +13,5 @@
     var vheight = $(window).height();
     $("html, body").animate({
       scrollTop: 0
-    }, 2000);
+    }, 1000);
   });
