@@ -247,7 +247,7 @@ label {
   color: black;
   font-family: 'JennaSue';
   font-size: 50px;
-  margin: 30px; 
+  margin: 30px;
 }
 .contactUser:hover {
   color: #61B329;
@@ -257,6 +257,11 @@ label {
   font-size: 50px;
   font-family: 'JennaSue';
   font-weight: 700;
+}
+#map{
+  height:400px;
+  width: 400px;;
+  border: 1px solid black;
 }
 /*-------------------------profile of user page -------------------*/
 .profilePagePicture {
