@@ -5,7 +5,6 @@
         }, {duration: 1000, queue: false});
 
       $('.splashPageSummary').hide().fadeIn({duration: 3000, queue: false});
-
   });
 
 
@@ -13,5 +12,5 @@
     var vheight = $(window).height();
     $("html, body").animate({
       scrollTop: 0
-    }, 1000);
+    }, 500);
   });
