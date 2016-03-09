@@ -57,12 +57,18 @@
   <fieldset class="form-group styled-select">
     <label for="picture_url">Add a Photo:</label>
     <select id="photoselect" name="picture_url" ng-model="picture_url"><optgroup>
-      <option value="images/heartshape.png">default-Photo</option>
-      <option value="{{user.image_url}}">facebook-Photo</option>
+      <option value="images/heartshape.png">heart</option>
+      <option value="{{user.image_url}}">facebook</option>
+      <option value="images/flowers.png">flowers</option>
+      <option value="images/gardeningtools.png">gardening-tools</option>
+      <option value="images/wheelbarrow.png">wheel-barrow</option>
     </optgroup>
     </select>
-    <div id="default-Photo" class="group"><img class="formImageExample" src="images/heartshape.png"></div>
-    <div id="facebook-Photo" class="group"><img class="formImageExample" src="{{user.image_url}}"></div>
+    <div id="heart" class="group"><img class="formImageExample" src="images/heartshape.png"></div>
+    <div id="facebook" class="group"><img class="formImageExample" src="{{user.image_url}}"></div>
+    <div id="flowers" class="group"><img class="formImageExample" src="images/flowers.png"></div>
+    <div id="gardening-tools" class="group"><img class="formImageExample" src="images/gardeningtools.png"></div>
+    <div id="wheel-barrow" class="group"><img class="formImageExample" src="images/wheelbarrow.png"></div>
   </fieldset>
 
   <!-- old photo code -->
@@ -95,7 +101,7 @@
 <script>
 $(document).ready(function () {
   $('.group').hide();
-  $('#default-Photo').show();
+  $('#heart-Photo').show();
   $('#photoselect').change(function () {
     $('.group').hide();
     console.log('#'+ $("#photoselect option:selected").html());
