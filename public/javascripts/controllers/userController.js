@@ -1,8 +1,10 @@
 app.controller('userController', function($scope, $location, $auth, $http, users){
 
   $scope.getPostId = users.getPostId;
+  $scope.picture_url = "images/heartshape.png"
   $scope.want = "true";
   $scope.state = "AK";
+
 
 
   $scope.logout = function(){
@@ -32,8 +34,9 @@ app.controller('userController', function($scope, $location, $auth, $http, users
       post.want = $scope.want
       post.description = $scope.description
 
+
       $http.post('post', post).then(function(response){
-        console.log(response);
+        // console.log(response);
         window.location.href = '/#/profile';
       })
 
