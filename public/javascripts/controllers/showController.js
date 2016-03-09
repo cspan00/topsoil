@@ -18,6 +18,12 @@ app.controller('showController', function($scope, $location, $routeParams, users
           position: new google.maps.LatLng(results.lat, results.lng),
           title: results.title
       })
+      $scope.marker.content = '<div class="infoWindowContent">' + results.want ? 'wants land' : 'has land' + '</div>';
+
+      google.maps.event.addListener($scope.marker, 'click', function(){
+        infoWindow.setContent('<h4>'+results.want? 'wants land' : 'has land' + '</h4>' );
+          infoWindow.open($scope.map, $scope.marker)
+      })
 
   })
 
