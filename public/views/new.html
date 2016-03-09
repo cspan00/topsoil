@@ -56,13 +56,16 @@
 
   <fieldset class="form-group styled-select">
     <label for="picture_url">Add a Photo:</label>
-    <select ng-model="picture_url"><optgroup>
-      <option value="images/heartshape.png">default photo</option>
-      <option src="{{user.image_url}}" value="{{user.image_url}}">facebook photo</option>
+    <select id="photoselect" name="picture_url" ng-model="picture_url"><optgroup>
+      <option value="images/heartshape.png">default-Photo</option>
+      <option value="{{user.image_url}}">facebook-Photo</option>
     </optgroup>
     </select>
+    <div id="default-Photo" class="group"><img class="formImageExample" src="images/heartshape.png"></div>
+    <div id="facebook-Photo" class="group"><img class="formImageExample" src="{{user.image_url}}"></div>
   </fieldset>
 
+  <!-- old photo code -->
   <!-- <fieldset class="form-group">
     <label for="picture_url">Add a Photo</label>
     <input class="form-control" type="text" id="picture_url" placeholder="please leave empty for default photo to show" ng-model="picture_url">
@@ -86,3 +89,17 @@
 
     <button class="btn btn-primary newFormSubmitButton" type="submit">Submit</button>
 </form>
+
+
+
+<script>
+$(document).ready(function () {
+  $('.group').hide();
+  $('#default-Photo').show();
+  $('#photoselect').change(function () {
+    $('.group').hide();
+    console.log('#'+ $("#photoselect option:selected").html());
+    $('#' + $("#photoselect option:selected").html()).show();
+  })
+});
+</script>

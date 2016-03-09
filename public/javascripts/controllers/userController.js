@@ -1,11 +1,10 @@
 app.controller('userController', function($scope, $location, $auth, $http, users){
 
+
   $scope.getPostId = users.getPostId;
   $scope.picture_url = "images/heartshape.png"
   $scope.want = "true";
   $scope.state = "AK";
-
-
 
   $scope.logout = function(){
     $auth.logout()
@@ -30,13 +29,13 @@ app.controller('userController', function($scope, $location, $auth, $http, users
       post.author = result.name
       post.title = $scope.title
       post.address = $scope.street + " " + $scope.city + " " + $scope.state + " " + $scope.zipcode
-      post.picture_url = $scope.picture_url
       post.want = $scope.want
       post.description = $scope.description
+      post.picture_url = $scope.picture_url
 
 
       $http.post('post', post).then(function(response){
-        // console.log(response);
+        console.log(response);
         window.location.href = '/#/profile';
       })
 
