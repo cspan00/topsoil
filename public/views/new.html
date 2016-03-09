@@ -37,10 +37,11 @@
     </div>
   </fieldset>
 
-  <fieldset class="form-group">
+  <fieldset class="form-group styled-select">
     <label for="state">State:</label>
-    <select ng-model="state">
+    <select ng-model="state"><optgroup>
       <option ng-repeat="state in ['AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'IA', 'ID', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY']">{{state}}</option>
+    </optgroup>
     </select>
   </fieldset>
 
@@ -69,7 +70,7 @@
 
   <fieldset class="form-group styled-select">
     <select ng-model="want"><optgroup>
-      <option value="true" selected="selected">Needs Land</option>
+      <option value="true">Needs Land</option>
       <option value="false">Has Land</option>
     </optgroup></select>
   </fieldset>
