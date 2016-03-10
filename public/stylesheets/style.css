@@ -280,6 +280,12 @@ label {
   font-family: 'JennaSue';
   font-weight: 700;
 }
+#map{
+  height:400px;
+  width: 400px;;
+  border: 1px solid black;
+  border-radius: 50%;
+}
 /*-------------------------profile of user page -------------------*/
 .profilePagePicture {
   border-radius: 30px;

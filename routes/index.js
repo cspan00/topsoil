@@ -74,10 +74,47 @@ router.get('/posts', function(req, res, next){
 })
 
 router.post('/post', function(req, res, next){
-  Posts().insert(req.body).then(function(response){
-    res.send("succesful post")
-  })
+  var address = req.body.address.trim()
+  var google_api = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + address
+  var my_key = process.env.GOOGLE_GEOCODE;
+
+
+
+
+
+  var post ={}
+  post.facebook_id = req.body.facebook_id
+  post.author = req.body.author
+  post.title = req.body.title
+  post.author = req.body.author
+  post.address = address
+  post.picture_url = req.body.picture_url
+  post.description = req.body.description
+
+
+  request(google_api+my_key, function(error,response,body){
+    if (!error && response.statusCode == 200) {
+      var jase = JSON.parse(body);
+      var lat = jase.results[0].geometry.location.lat;
+      var lng = jase.results[0].geometry.location.lng;
+      post.lat = lat
+      post.lng = lng
+      Posts().insert(post).then(function(response){
+        res.send("succesful post")
+      })
+    }
+  });
 })
+
+
+
+
+
+
+
+
+
+
 
 router.get('/post/:id', function(req, res, next){
   Posts().where('id', req.params.id).first().then(function(response){
