@@ -5,7 +5,8 @@ var app = angular.module('topsoil', ['ngRoute', 'satellizer', 'ngMessages', 'ngA
 app.config(function ($routeProvider, $authProvider) {
 
   $authProvider.facebook({
-      clientId: '1668067083447238',
+      // clientId: '1668067083447238',
+      clientId: '449685485222786',
       scope: ['email'],
       scopeDelimiter: ',',
       profileFields: ['name', 'id', 'picture.type(large)', 'emails']
