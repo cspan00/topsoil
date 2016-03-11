@@ -10,6 +10,9 @@
           console.log(error.data.message, error.status);
         });
     };
+
+
+
     $scope.authenticate = function(provider) {
       $auth.authenticate(provider)
         .then(function(response) {

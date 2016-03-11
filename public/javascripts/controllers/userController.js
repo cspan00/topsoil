@@ -6,13 +6,16 @@ app.controller('userController', function($scope, $location, $auth, $http, users
   $scope.want = "true";
   $scope.state = "AK";
 
+
+
+
   $scope.logout = function(){
     $auth.logout()
     console.log("successfully logged out!");
   }
 
-
   users.getUserData().then(function(result){
+    // console.log(result.facebook_id);
     $scope.user = result;
   })
 

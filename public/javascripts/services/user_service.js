@@ -27,8 +27,4 @@ this.getUserById = function(id){
   })
 }
 
-
-
-
-
 })

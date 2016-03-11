@@ -3,7 +3,7 @@
     <div class="navbar-header headerTitle">
         <a href="/#/" class="homeIconLink"><i class="fa fa-2x fa-home homeIcon"></i></a> Connect Share Grow
     </div>
-    <a ng-click="logout()" href = "/#/" class="btn btn-primary btn-facebook facebookButton pull-right"><i class="fa fa-facebook-official"></i>Logout</a>
+    <a href="/#/" class="btn btn-primary btn-facebook facebookButton pull-right" ng-click="login()"><i class="fa fa-facebook-official"></i>{{user.facebook_id? 'logout':'login'}}</a>
     <a class="createListingButton btn btn-primary pull-right" href="/#/new"><img src="images/american-mountain-ash.png" width="33px">Create a Listing</a>
     <span class="pull-right checkboxLabelText btn btn-primary"><input type="checkbox" ng-model="search.want" ng-true-value='true' data-ng-false-value=''>Needs Land</span>
 
@@ -11,13 +11,14 @@
   </div>
 </nav>
 
+
 <div class="backgroundColor">
   <div class="row-fluid postBodyFont">
     <div class="col-md-3">
       <div class="media">
       </div>
       <div class="media-left">
-        <p class="welcomeUser">Welcome, {{user.first_name}}!</p>
+        <p class="welcomeUser">{{user.first_name? 'Welcome ': ""}} {{user.first_name}}</p>
         <img class="profilePicture" src="{{user.image_url}}">
       </div>
     </div>

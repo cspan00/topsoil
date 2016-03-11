@@ -61,6 +61,8 @@ router.post('/auth/facebook', function(req,res){
       })
     });
 
+
+
 router.post('/user', function(req, res){
   var token = req.body.token
   var user = verifyToken(token)
@@ -77,9 +79,6 @@ router.post('/post', function(req, res, next){
   var address = req.body.address.trim()
   var google_api = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + address
   var my_key = process.env.GOOGLE_GEOCODE;
-
-
-
 
 
   var post ={}
@@ -107,15 +106,6 @@ router.post('/post', function(req, res, next){
 })
 
 
-
-
-
-
-
-
-
-
-
 router.get('/post/:id', function(req, res, next){
   Posts().where('id', req.params.id).first().then(function(response){
     res.send(response);
@@ -127,9 +117,6 @@ router.get('/profile/:id', function(req,res, next){
     res.send(response);
   })
 })
-
-
-
 
 
 })
