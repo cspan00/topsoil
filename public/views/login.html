@@ -3,7 +3,7 @@
     <div class="navbar-header headerTitle">
         <a href="/#/" class="homeIconLink"><i class="fa fa-2x fa-home homeIcon"></i></a> Connect Share Grow
     </div>
-    <a href="/#/" class="btn btn-primary btn-facebook facebookButton pull-right" ng-click="login()"><i class="fa fa-facebook-official"></i>{{user.facebook_id? 'logout':'login'}}</a>
+    <a href="/#/" class="btn btn-primary btn-facebook facebookButton pull-right" ng-click="login()"><i class="fa fa-facebook-official"></i> {{user.facebook_id? 'logout':'login'}}</a>
     <a class="createListingButton btn btn-primary pull-right" href="/#/new"><img src="images/american-mountain-ash.png" width="33px">Create a Listing</a>
     <span class="pull-right checkboxLabelText btn btn-primary"><input type="checkbox" ng-model="search.want" ng-true-value='true' data-ng-false-value=''>Needs Land</span>
 
@@ -11,7 +11,7 @@
   </div>
 </nav>
 
-
+{{users.facebook_id}}
 <div class="backgroundColor">
   <div class="row-fluid postBodyFont">
     <div class="col-md-3">
@@ -35,6 +35,8 @@
               </a>
             </div>
             <div class="media-body">
+              <a ng-if="post.facebook_id === user.facebook_id" href="#" class="btn btn-primary pull-right">edit post</a>
+              <button ng-if="post.facebook_id === user.facebook_id" type="button" class="btn btn-sm pull-right">delete post</button>
               <a href="/#/show/{{post.id}}" class="linkToShowPage"><h3 class="media-heading postTitle" ng-click="getPostId()">{{post.title}}</h3></a>
               <p class="pull-right booleanValue">{{post.want? 'Needs Land':'Has Land'}}</p>
               <h3 class="media-heading postAuthor"> By {{post.author}}</h3>
