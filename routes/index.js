@@ -4,6 +4,7 @@ var router = express.Router();
 var request = require('request')
 var knex = require('../db/knex')
 var jwt = require('jsonwebtoken')
+var 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.json({ title: 'Express' })
@@ -93,7 +94,9 @@ router.post('/post', function(req, res, next){
 
 
   request(google_api+my_key, function(error,response,body){
-    if (!error && response.statusCode == 200) {
+  console.log(body.results);
+  if(!error && response.statusCode == 200){
+
       var jase = JSON.parse(body);
       var lat = jase.results[0].geometry.location.lat;
       var lng = jase.results[0].geometry.location.lng;
@@ -101,6 +104,12 @@ router.post('/post', function(req, res, next){
       post.lng = lng
       Posts().insert(post).then(function(response){
         res.send("succesful post")
+      })
+
+    }
+    else{
+    Posts().insert(post).then(function(response){
+      res.send('Bad Address: but succesful post')
       })
     }
   });
